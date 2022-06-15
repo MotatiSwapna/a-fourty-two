@@ -24,7 +24,7 @@ for i in totalFiles:
 print("total number of csv files in bucket is ",c)
 #extrexting csv files
 for i in range(1,c+1):
-    csvfiles.append(s3.Object(my_bucket, ".csv".format(i)))
+    csvfiles.append(s3.Object(my_bucket, "{}.csv".format(i)))
 file1 = pd.read_csv(csvfiles[0].get()["Body"])
 file2 = pd.read_csv(csvfiles[1].get()["Body"])
 file3 = pd.read_csv(csvfiles[2].get()["Body"])

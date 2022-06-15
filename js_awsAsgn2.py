@@ -194,7 +194,7 @@ hyperparameter_ranges = {
 }
 
 
-# In[ ]:
+# In[18]:
 
 
 tuner_log = HyperparameterTuner(
@@ -213,7 +213,7 @@ tuner_log.fit(
 )
 
 
-# In[ ]:
+# In[19 ]:
 
 
 boto3.client("sagemaker").describe_hyper_parameter_tuning_job(
@@ -221,7 +221,7 @@ boto3.client("sagemaker").describe_hyper_parameter_tuning_job(
 )["HyperParameterTuningJobStatus"]
 
 
-# In[ ]:
+# In[20 ]:
 
 
 hyperparameter_ranges_linear = {
@@ -230,7 +230,7 @@ hyperparameter_ranges_linear = {
 }
 
 
-# In[ ]:
+# In[21 ]:
 
 
 tuner_linear = HyperparameterTuner(
@@ -249,7 +249,7 @@ tuner_linear.fit(
 )
 
 
-# In[ ]:
+# In[ 22]:
 
 
 boto3.client("sagemaker").describe_hyper_parameter_tuning_job(
